@@ -43,7 +43,7 @@ public class Vehicle {
   /**
 	 * Finding the Blacklisted vehicle.
    */
-    public boolean isBlacklisted() {
+    public boolean isBlacklisted(Vehicle vin) {
         if (vin.equals("1HGBH41JXMN109186")) {
             return true;
         } else if (vin.equals("2HGBH41JXMN109186")) {
@@ -60,7 +60,7 @@ public class Vehicle {
   /**
 	 * Returns the Vehicle for given VIN.
    */
-   public static Vehicle byVin(final String vin){
+   public Vehicle byVin(final String vin){
       return new Vehicle(vin); 
    }
 }
