@@ -1,3 +1,7 @@
+    
+     /**
+     * Test the vehicle wether it is backlisted or not.
+     */
     @Test
     public void testBlackListedVehicle() {
         final Vehicle vehicle = new Vehicle();
