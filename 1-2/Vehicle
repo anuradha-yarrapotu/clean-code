@@ -1,9 +1,48 @@
+
+/**
+
+ * <b>This is the vehivle class in the package.</b>
+ * It says thst vehicle is exist or not by providing VIN number.
+ * @author Anuradha Yarrapotu
+ * @see Vehicle byvin
+*/
+
 public class Vehicle {
+   /**
+	 * The vin number
+   */
     private final String vin;
+
+   /**
+	 * Construct a new vehicle for a given a vin.
+         * @param the vin number
+   */
     private Vehicle(final String vin){
         this.vin = vin;
     }
-public static Vehicle byVin(final String vin){ return new Vehicle(vin);    }
+
+
+    /**
+	 * Set the VIN numver for this Vehicle
+     */
+   public void setVinString vin) {
+
+		this.vin = vin;
+    }
+
+
+    /**
+	 * Return the vin specified for this Vehicle
+     */
+    public String getVin() {
+	return this.vin;
+     }
+
+  
+
+  /**
+	 * Finding the Blacklisted vehicle.
+   */
     public boolean isBlacklisted() {
         if (vin.equals("1HGBH41JXMN109186")) {
             return true;
@@ -16,5 +55,12 @@ public static Vehicle byVin(final String vin){ return new Vehicle(vin);    }
         } else {
             return false;
         }
-}
+   }
+
+  /**
+	 * Returns the Vehicle for given VIN.
+   */
+   public static Vehicle byVin(final String vin){
+      return new Vehicle(vin); 
+   }
 }
